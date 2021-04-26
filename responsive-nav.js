@@ -9,6 +9,11 @@ jQuery('document').ready(function($){
             mobileNav.classList.toggle('active');
             hamburger.classList.toggle('toggle');
         });
+        
+        hamburger.addEventListener('touched', ()=> {
+            mobileNav.classList.toggle('active');
+            hamburger.classList.toggle('toggle');
+        });
         }
         mobileMenu();
 
@@ -17,6 +22,9 @@ jQuery('document').ready(function($){
         $('.nav-trigger').toggleClass("trigger");
         $('nav ul .sub-menu').toggleClass("open");
     });
-
     
+    $('.nav-trigger').touched(function(){
+        $('.nav-trigger').toggleClass("trigger");
+        $('nav ul .sub-menu').toggleClass("open");
+    });
 });
