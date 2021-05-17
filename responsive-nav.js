@@ -10,7 +10,7 @@ jQuery('document').ready(function($){
             hamburger.classList.toggle('toggle');
         });
         
-        hamburger.addEventListener('touched', ()=> {
+        hamburger.addEventListener('touchend', ()=> {
             mobileNav.classList.toggle('active');
             hamburger.classList.toggle('toggle');
         });
@@ -23,7 +23,7 @@ jQuery('document').ready(function($){
         $('nav ul .sub-menu').toggleClass("open");
     });
     
-    $('.nav-trigger').touched(function(){
+    $('.nav-trigger').touchend(function(){
         $('.nav-trigger').toggleClass("trigger");
         $('nav ul .sub-menu').toggleClass("open");
     });
