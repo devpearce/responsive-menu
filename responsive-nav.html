@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav Test Page</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="responsive-nav.js"></script> 
+    <link rel="stylesheet" href="responsive-nav.css">
+</head>
+<body>
+    <header>
+        <button id="hamburger" class="hamburger" role="menu" title="Mobile Menu Button" aria-label="mobile menu button">
+            <div class="hamburger__line top"></div>
+            <div class="hamburger__line middle"></div>
+            <div class="hamburger__line bottom"></div>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Wrapper -->
+    <div id="mobile-nav" class="mobile-menu__wrapper">
+        <nav class="mobile-menu" role="navigation" title="Mobile Menu" aria-label="mobile menu">
+            <ul id="mobile-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="nav-trigger">Services</a>
+                    <ul class="sub-menu">
+                        <li>Service 1</li>
+                        <li>Service 2</li>
+                        <li>Service 3</li>
+                    </ul>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        <h1>Demo Responsive Menu</h1>
+        <p>Size screen down past the 992px breakpoint to view the menu.</p>
+    </div>
+
+</body>
+</html>
