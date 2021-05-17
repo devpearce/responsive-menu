@@ -17,7 +17,7 @@ jQuery('document').ready(function($){
         }
         mobileMenu();
 
-    // Mobile menu dropdown trigger for sub-menu
+    // Trigger for sub-menu
     $('.nav-trigger').click(function(){
         $('.nav-trigger').toggleClass("trigger");
         $('nav ul .sub-menu').toggleClass("open");
