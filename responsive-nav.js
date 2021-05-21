@@ -1,23 +1,5 @@
 jQuery('document').ready(function(){
 
-    // Mobile menu hamburger button
-    // const mobileMenu = () => {
-    //     const hamburger = document.getElementById('hamburger');
-    //     const mobileNav = document.getElementById('mobile-nav');
-
-    //     hamburger.addEventListener('click', ()=> {
-    //         mobileNav.classList.toggle('active');
-    //         hamburger.classList.toggle('toggle');
-    //     });
-        
-    //     hamburger.addEventListener('touchend', ()=> {
-    //         mobileNav.classList.toggle('active');
-    //         hamburger.classList.toggle('toggle');
-    //     });
-    // }
-    // mobileMenu();
-
-
 // Touch supported 
 
     let mobileNav = document.getElementById("mobile-nav");
