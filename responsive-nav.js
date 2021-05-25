@@ -11,8 +11,10 @@ jQuery('document').ready(function(){
         e.stopPropagation();
     });
 
-    mobileNav = function(){
+    mobileNav = function(e){
         document.querySelector('div#mobile-nav').classList.toggle('active');
+        e.preventDefault();
+        e.stopPropagation();
     };
 
     hamburger.addEventListener("click", mobileNav);
