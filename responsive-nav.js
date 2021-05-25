@@ -18,23 +18,32 @@ jQuery('document').ready(function(){
     hamburger.addEventListener("click", mobileNav);
     hamburger.addEventListener("touchend", mobileNav);
 
-    // Trigger for sub-menu
-    // $('.nav-trigger').click(function(){
-    //     $('.nav-trigger').toggleClass("trigger");
-    //     $('nav ul .sub-menu').toggleClass("open");
-    // });
-    
-    // $('.nav-trigger').touchend(function(){
-    //     $('.nav-trigger').toggleClass("trigger");
-    //     $('nav ul .sub-menu').toggleClass("open");
-    // });
+    let expandableTopItems = document.querySelectorAll(".topItem"); 
 
-    // let subMenu = document.querySelector("li.nav-trigger");
+    expandableTopItems.forEach(function(topItem) {
+    /* buttons are generated on init, to support no JS and have the submenus displayed by default */
+    topItem.innerHTML=`<button type=button aria-expanded="false">${topItem.textContent}</button>`; //insert a button in the spans
+    topItem.nextElementSibling.hidden=true; //hide submenu by default
+        let btn=topItem.firstElementChild;
+        /* add listener on each button to implement the behavior on click */
+        btn.addEventListener("click", function(e) {
+            let expanded = this.getAttribute("aria-expanded") === "true" || false;
+            this.setAttribute("aria-expanded", !expanded);
+            let submenu = this.parentNode.nextElementSibling;
+            submenu.hidden = !submenu.hidden;
+            e.preventDefault();
+            return false;
+        });
 
-    // subMenu.addEventListener("click", function(e) {
-    //     document.querySelector('nav ul .sub-menu').classList.toggle('open');
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    // });
+        btn.addEventListener("touchend", function(e) {
+            let expanded = this.getAttribute("aria-expanded") === "true" || false;
+            this.setAttribute("aria-expanded", !expanded);
+            let submenu = this.parentNode.nextElementSibling;
+            submenu.hidden = !submenu.hidden;
+            e.preventDefault();
+            return false;
+        });
+    });
+
 });
 
